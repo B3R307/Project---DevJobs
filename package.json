@@ -12,9 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "npm-run-all": "4.1.2"
+    "express": "^4.16.3",
+    "fs-extra": "^7.0.0",
+    "npm-run-all": "4.1.2",
+    "superagent": "^3.8.3"
   },
   "devDependencies": {
+    "node-sass": "^4.9.2",
     "nodemon": "1.12.1"
   }
 }
