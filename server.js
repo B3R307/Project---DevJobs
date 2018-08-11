@@ -7,6 +7,7 @@ const app = express()
 const PORT = 3000
 
 app.use('/', pageRouter)
+app.use('/api', apiRouter)
 
 app.listen(PORT, ()=>{
   console.log(`App listening on localhost:${PORT}`);

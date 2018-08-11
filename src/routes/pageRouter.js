@@ -1,4 +1,4 @@
-const Router = require(`express`).Router
+const Router = require(`express`).Router;
 const pageRouter = Router()
 const fs = require('fs-extra')
 
@@ -8,6 +8,17 @@ pageRouter
         .then((htmlData)=>{
            res.send(htmlData)
         })
-  })
+   })
 
-  module.exports = pageRouter
+pageRouter
+ .get('/about', (req, res)=>{
+   fs.readFile(`${__dirname}/../views/about.html`, 'utf-8')
+   .then((htmlData)=>{
+     res.send(htmlData)
+   })
+ })
+
+
+
+
+module.exports = pageRouter
