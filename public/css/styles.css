@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+  src:
+  url("../fonts/Libre_Franklin/LibreFranklin-SemiBold.ttf") format("truetype");
+
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 400;
+  src:
+  url("../fonts/Libre_Franklin/LibreFranklin-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 200;
+  src:
+  url("../fonts/Libre_Franklin/LibreFranklin-Thin.ttf") format("truetype");
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin";
+  background: #ddd;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+
+.font--primary-theme{
+  color: #C2185B;
+}
+
+.header--landing{
+  min-height: 100vh;
+  color: #fff;
+  background: url('../images/splash-landing.jpg');
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+  .header--landing__title{
+    color: #C2185B;
+    font-weight: 400;
+    margin-bottom: .25rem;
+    width: 100%;
+  }
+
+  .header--landing__slogan{
+    width: 100%;
+  }
+
+  .header--landing__btn{
+    border: 1px solid #00ACC1;
+    color: #00ACC1;
+    margin: .25rem;
+    padding: .5rem 1rem;
+  }
+
+
+.header--about{
+  padding: 2rem;
+  background: url('../images/splash-about.jpg');
+  background-size: cover;
+}
+
+  .header--about__title{
+    color: #fff;
+    font-weight: 400;
+    width: 100%;
+  }
+
+.header--404{
+  min-height: 100vh;
+  color: #333;
+  background: url('../images/splash-404.jpg');
+  background-size: cover;
+  text-shadow: 1px 1px 1px rgba(255,255,255,.4);
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+.header--404__title{
+  max-width: 200px;
+}
+
+.header--404__btn{
+  color: #673AB7;
+  border: 1px solid #673AB7;
+  margin: .25rem;
+  padding: .5rem 1rem;
+}
+
+
+
+
+
+
+
+.section--about{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: .5rem;
+}
+
+.company-fact{
+  background: #fff;
+  border: 1px solid rgba(200,200,200,1);
+  box-shadow: 1px 0 1px rgba(200,200,200,.4);
+  padding: 1rem ;
+  margin: 1rem auto;
+
+}
+
+.company-fact__title{
+
+}
+
+.company-fact__description{
+
+}
