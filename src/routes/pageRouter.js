@@ -1,6 +1,7 @@
 const Router = require(`express`).Router;
-const pageRouter = Router()
 const fs = require('fs-extra')
+
+const pageRouter = Router()
 
 pageRouter
   .get('/', (req, res)=>{

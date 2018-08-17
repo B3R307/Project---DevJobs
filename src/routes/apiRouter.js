@@ -49,21 +49,26 @@ apiRouter.get('/jobs', (req, res)=>{
 })
 
   apiRouter.get('/companies', (req, res)=>{
-    res.json([
-      {
-    name: 'Company ABC',
-    description: 'Energistically network alternative technology deploying impactful partnerships.',
-    imageLink: 'http://www.tinygraphs.com/labs/isogrids/hexa16/nsuaio',
-    location: 'Guadalajara'
-  },
-  {
-    name: 'Lossless Enterprises',
-    description: 'Quickly strategizing team driven "outside the box" thinking.',
-    location: 'Ciudad de Mexico',
-    imageLink: 'http://www.tinygraphs.com/labs/isogrids/hexa16/8282',
-  }
-    ])
+      const db =req.app.locals.db
+        db.select('*').from('companies')
+        .then((dbRecordsReturned)=>{
+          res.status(200).json(dbRecordsReturned)
+        })
   })
 
+
+  apiRouter.get('/companies/:_id', (req, res)=>{
+     const db =req.app.locals.db
+
+     const idInRoute = req.params._id
+     console.log(idInRoute);
+
+     db.select('*').from('companies')
+     .where('id', '=', idInRoute)
+     .then((records)=>{
+        res.json(records)
+     })
+
+  })
 
 module.exports = apiRouter
