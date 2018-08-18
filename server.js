@@ -2,6 +2,8 @@ const express = require('express')
 const ejs = require('ejs')
 
 const knex = require('knex')
+const { Model } = require('objection')
+
 const dbConfigObj = require('./knexfile.js')
 
 
@@ -12,13 +14,15 @@ const apiRouter = require(`./src/routes/apiRouter.js`)
 const app = express()
 
 const appDb = knex(dbConfigObj.development)
+Model.knex(appDb)
+
 app.locals.db = appDb
 
 
-appDb.select('*').from('companies')
-  .then((records)=>{
-    console.log(records)
-  })
+// appDb.select('*').from('companies')
+//   .then((records)=>{
+//     console.log(records)
+//   })
 
 const PORT = 3000
 
