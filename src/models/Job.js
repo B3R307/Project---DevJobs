@@ -9,7 +9,7 @@ class Job extends Model {
     const Company = require('./Company.js')
 
     return {
-        theCompany: {
+        company: {
           relation: Model.BelongsToOneRelation,
           modelClass: Company,
           join: {

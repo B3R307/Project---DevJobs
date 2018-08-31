@@ -1,7 +1,7 @@
 const express = require('express')
 const ejs = require('ejs')
 
-
+const bodyParser = require('body-parser')
 
 const knex = require('knex')
 const { Model } = require('objection')
@@ -14,19 +14,20 @@ const apiRouter = require(`./src/routes/apiRouter.js`)
 
 
 const app = express()
+const PORT = 3000
 
 const appDb = knex(dbConfigObj.development)
 Model.knex(appDb)
-
 app.locals.db = appDb
 
+
+app.use( bodyParser.urlencoded({extended:false}) )
+app.use( bodyParser.json())
 
 // appDb.select('*').from('companies')
 //   .then((records)=>{
 //     console.log(records)
 //   })
-
-const PORT = 3000
 
 app.use( express.static( `${__dirname}/public`) )
 

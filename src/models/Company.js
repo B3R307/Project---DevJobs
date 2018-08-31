@@ -2,7 +2,7 @@ const { Model } = require('objection')
 
  class Company extends Model {
     static get tableName(){
-      return 'companies'
+      return 'companies';
     }
 
 
@@ -10,7 +10,7 @@ const { Model } = require('objection')
      const Job = require('./Job.js')
 
      return {
-       companyJobs: {
+       job: {
          relation: Model.HasManyRelation,
          modelClass: Job,
          join: {
