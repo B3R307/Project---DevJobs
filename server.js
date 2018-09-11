@@ -23,8 +23,6 @@ const authRouter = require(`./src/routers/authRouter.js`)
 const app = express()
 const PORT = 3000
 
-
-
 app.use(cookieParser() )
 app.use( cookieSession ({
    name: 'cookiesession',
@@ -33,7 +31,6 @@ app.use( cookieSession ({
    signed: false
 
 }))
-
 
 app.use(passport.initialize())
 app.use(passport.session())
@@ -64,11 +61,15 @@ app.use('/', pageRouter)
 app.use('/api', apiRouter)
 app.use('/auth', authRouter)
 
-app.use((req, res )=>{
-  res.send('<h3> 404 BIG ERROR - PAGE NO EXIST </h3>')
+
+
+app.use((req, res)=>{
+  res.render('reactApp.ejs')
 })
 
-
 app.listen(PORT, ()=>{
+  console.log(`==================`);
   console.log(`App listening on localhost:${PORT}`);
+  console.log(`Enviroment : ${process.env.NODE_ENV}`);
+  console.log(`==================`);
 })

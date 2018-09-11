@@ -34,6 +34,11 @@ a{
   text-decoration: none;
 }
 
+img{
+  width: 100%;
+  display: block;
+}
+
 .font--primary-theme{
   color: #C2185B;
 }
@@ -105,10 +110,6 @@ a{
 
 
 
-
-
-
-
 .section--about{
   max-width: 800px;
   margin: 0 auto;
@@ -130,4 +131,375 @@ a{
 
 .company-fact__description{
 
+}
+
+#react-app{
+  padding-top: 2rem;
+}
+
+.navbar{
+  position: fixed;
+  top: 0; left:0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  background: rgba(50,50,50, 1);
+  color: #fff;
+  padding: 20px;
+}
+
+.nav__link{
+  font-family: monospace;
+  font-size: 1.25rem;
+  color: #FFEB3B;
+  padding: 1rem;
+  margin-left: .25rem;
+}
+
+.nav__link--selected{
+  border: 1px solid #ddd;
+}
+
+.nav__link-logout{
+  background: #666;
+  color: #ddd;
+  margin-left: 1rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+}
+
+.nav__link-home{
+  font-size: 2.2rem;
+  color:  #C2185B;
+}
+
+.nav__link-login{
+  color: #FF9800;
+}
+
+.nav__link-register{
+  color: #00ACC1;
+}
+
+
+.form{
+  max-width: 580px;
+  margin: 0 auto;
+  border: 1px solid #333;
+  padding: 2rem;
+  background: #fff;
+}
+
+.form__field{
+  width: 100%;
+  display: block;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  border-bottom: #333 1px solid;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+  .form__login-btn{
+    background: #FF9800;
+    border: 0;
+    padding: .5rem 1.5rem;
+    font-family: monospace;
+    display: block;
+    margin: 0 auto;
+  }
+
+.form__register-btn{
+  background: #00ACC1;
+  color: #fff;
+  border: 0;
+  padding: .5rem 1.5rem;
+  font-family: monospace;
+  display: block;
+  margin: 0 auto;
+}
+
+.page {
+  max-width: 660px;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.job-listing{
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(50,50,50,.3);
+  padding: 1rem .5rem;
+  margin-bottom: 1rem;
+}
+
+.job-listing__title{
+  color: #8BC34A;
+  margin-top: 0;
+}
+
+.job-listing__location{
+  color: #aaa;
+}
+
+.job_listing__view-job-btn{
+  padding: .5rem;
+  display: inline-block;
+  border: 1px solid #8BC34A;
+  color: #8BC34A;
+}
+
+.job-listing__divider{
+  border:0;
+  border-bottom: dotted rgba(200,200,200, .4) 1px;
+}
+
+.company-listing{
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(50,50,50,.3);
+  padding: 1rem .5rem;
+  margin-bottom: 1rem;
+}
+
+.company-listing__title{
+  border-left: 2px solid #FF9800;
+  padding: 1rem;
+  background: #ededed;
+  margin-top: 0;
+
+}
+
+.company-listing__subtitle{
+  display: inline-block;
+  margin-top: .5rem;
+  margin-bottom: 0rem;
+  margin-left: 1rem;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid #FF9800;
+}
+
+.company-listing__location,
+.company-listing__description{
+  margin-left: 1rem;
+}
+
+.company-listing__view-company-btn{
+  padding: .5rem;
+  display: inline-block;
+  border: 1px solid #FF9800;
+  color: #FF9800;
+  margin-left: 1rem;
+}
+
+.job-single{
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-single__info-col{
+  width: 66%;
+}
+
+  .job-single__subtitle{
+    font-size: .85rem;
+  }
+
+  .job-single__jobtype{
+    background: #8BC34A;
+    display: inline-block;
+    padding: .5rem 1rem;
+  }
+
+  .job-single__info{
+    margin-left: 2rem;
+  }
+
+  .job-single__description{
+    font-size: 1.125rem;
+  }
+
+  .job-single__company-col{
+    width: 33%;
+    border-left: 1px solid #ddd;
+    padding: .5rem;
+  }
+
+  .job-single__applynow{
+    color: #8BC34A;
+    opacity: .7;
+  }
+  .job-single__divider{
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    margin: 1rem;
+  }
+  .job-single__applynow-btn{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #8BC34A;
+    color: #8BC34A;
+    background: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .job-single__company-img{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .job-single__company-name{
+    margin-bottom: .25rem;
+  }
+  .job-single__company-location{
+    margin-top: 0rem;
+    margin-bottom: .25rem;
+    font-size: .75rem;
+  }
+
+  .job_single__company-link{
+    border: 1px solid #999;
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    font-size: .75rem;
+    margin-top: .5rem;
+    color: #999;
+  }
+
+.company-single{
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-single__company-col{
+  width: 58.3%;
+  padding: .5rem;
+}
+  .company-single__image{
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .company-single__title{
+    margin: .25rem;
+  }
+  .company-single__location{
+    margin: 0;
+    margin-left: .25rem;
+    font-size: .
+  }
+
+.company-single__job-listings-col{
+  width: 42.7%;
+  border-left: 1px solid #ddd;
+  padding: .5rem;
+}
+
+.company-single__job-listing{
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.company-single__job-listing__title{
+  margin: 0;
+  font-weight: 700;
+  color: #8BC34A;
+  margin: 0;
+  margin-bottom: .25rem;
+  width: 100%;
+}
+.company-single__job-listing__moreinfo{
+  margin: 0rem;
+  margin-bottom: .5rem;
+  font-size: .75rem;
+  width: 100%;
+}
+
+.company-single__job-listing__link{
+  border: 1px solid #999;
+  color: #999;
+  display: inline-block;
+  padding: .25rem;
+  font-size: .75rem;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.page-dashboard{
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 80vh;
+  background: #333;
+  margin-top: 5rem;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.page-dashboard__user-actions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.page-dashboard__action-btn {
+   width: 250px;
+   padding: 1rem;
+   border: 1px solid #767;
+   margin : .75rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-size: 1.5rem;
+   text-align: left;
+}
+
+.page-dashboard__action-btn i{
+  padding-left: .5rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+
+.page-dashboard--username{
+  color:  #8BC34A;
+}
+
+
+.page-dashboard__action-btn--user-profile{
+  background: #FF9800
+}
+
+.page-dashboard__action-btn--new-job{
+  background: #8BC34A;
+}
+
+.page-dashboard__action-btn--view-jobs{
+  background: #C2185B;
+}
+
+.page-dashboard__btn-change{
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.form--login{
+  margin-top: 3rem;
 }
