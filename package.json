@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production node server.js",
+    "deploy:build": "NODE_ENV=production ./node_modules/.bin/webpack",
+    "deploy:commit-production": "git add . && git commit -m 'production build'",
+    "deploy:push-remote": "git push heroku master",
+    "deploy": "npm-run-all deploy:build deploy:commit-production deploy:push-remote",
     "dev": "npm-run-all --parallel dev:server dev:webpack",
     "dev:webpack": "NODE_ENV=development ./node_modules/.bin/webpack --watch",
     "dev:server": "NODE_ENV=development nodemon server.js --watch src --watch server.js --ignore src/client"
