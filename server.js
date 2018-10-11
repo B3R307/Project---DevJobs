@@ -21,7 +21,7 @@ const authRouter = require(`./src/routers/authRouter.js`)
 
 
 const app = express()
-const PORT = process.env.NODE_ENV === 'prodution' ? process.env.PORT : 3000
+const PORT = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
 
 app.use(cookieParser() )
 app.use( cookieSession ({
