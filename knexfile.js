@@ -19,18 +19,18 @@ const devConfig = {
 }
 
 
-const productionConfig = Object.assign(
-  {},
-  devConfig,
-  { connection: process.env.DATABASE_URL}
+//const productionConfig = Object.assign(
+  //{},
+  //devConfig,
+  //{ connection: process.env.DATABASE_URL}
 )
 
-module.exports = process.env.NODE_ENV === 'production' ?
-  productionConfig :
-  devConfig
+//module.exports = process.env.NODE_ENV === 'production' ?
+  //productionConfig :
+  //devConfig
 
 
-// module.exports = {
-//   development: devConfig,
-//   prodution:{}
-// }
+module.exports = {
+   development: devConfig,
+   production:{}
+ }

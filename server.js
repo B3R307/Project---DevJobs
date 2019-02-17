@@ -21,6 +21,7 @@ const authRouter = require(`./src/routers/authRouter.js`)
 
 
 const app = express()
+const PORT = 3000
 const PORT = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
 
 app.use(cookieParser() )
@@ -38,9 +39,9 @@ passport.use(registerLocalStrategy())
 passport.serializeUser(configSerializeUser())
 passport.deserializeUser(configDeserializeUser())
 
-// const appDb = knex(dbConfigObj.development)
+ const appDb = knex(dbConfigObj.development)
 
-const appDb = knex(dbConfigObj)
+//const appDb = knex(dbConfigObj)
 
 Model.knex(appDb)
 app.locals.db = appDb
